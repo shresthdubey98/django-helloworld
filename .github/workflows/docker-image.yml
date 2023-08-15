@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag djangoImage:$(date +%s)
+      run: docker build . --file Dockerfile --tag django_image:$(date +%s)
     - uses: actions/checkout@v3
     - name: Run Docker image
-      run: docker run -dp 127.0.0.1:8000:8000 djangoImage:$(date +%s)
+      run: docker run -dp 127.0.0.1:8000:8000 django_image:$(date +%s)
